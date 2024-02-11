@@ -58,9 +58,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Extract relevant keywords using TF-IDF analysis.')
     parser.add_argument('url', help='Supply Wordpress website url.')
     args = parser.parse_args()
-
     url = args.url
     base = urlparse(url).netloc
+    
     posts = get_posts(url)
     for p in posts:
         content = ''
